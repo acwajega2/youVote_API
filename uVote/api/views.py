@@ -53,8 +53,7 @@ class Election_RaceListAPIView(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated,)
 
     #overiding the query_Set
-    def get_queryset(self):
-      
+    def get_queryset(self):      
         return Election_Race.objects.all()
 
 
@@ -64,7 +63,7 @@ class Voting_registerListAPIView(generics.ListCreateAPIView):
     lookup_field = 'pk'
     pagination_class = CustomPagination
     permission_classes = (IsAuthenticated,)
-
+    
     #overiding the query_Set
     def get_queryset(self):
       
